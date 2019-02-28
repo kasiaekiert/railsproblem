@@ -1,0 +1,13 @@
+<div class="page-header">
+  <%= link_to problems_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <h1>New problem</h1>
+</div>
+
+<%= render 'form' %>
+
+<h1>Steps</h2> 
+<%= render 'steps_fields', f: f %>
+
