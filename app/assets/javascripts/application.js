@@ -17,9 +17,9 @@
 //= require bootstrap
 //= require_tree .
 
-$( document ).on('turbolinks:load', function() {
-    initialize_document()
-})
+// $( document ).on('turbolinks:load', function() {
+//     initialize_document()
+// })
 
 $(document).ready(function(){
     initialize_document()

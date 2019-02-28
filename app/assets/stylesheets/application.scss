@@ -16,7 +16,15 @@
 
  @import "bootstrap";
 
- .adding_steps {
+ .footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   text-align: center;
+ }
+
+.adding_steps {
     position: relative;
     width: 100%;
     padding-right: 15px;
@@ -29,5 +37,18 @@
 
 .navbar a:hover {
    background-color: transparent;
+}
+
+.btn-basic {
+   color: white !important; 
+   background-color: #007bff;
+   border-color: #007bff;
+}
+
+.link-text{
+      a:hover {
+      text-decoration: none !important;
+      background-color: transparent !important;
+      }
 }
 

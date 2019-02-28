@@ -26,7 +26,6 @@ class ProblemsController < ApplicationController
   # POST /problems.json
   def create
     @problem = Problem.new(problem_params)
-
     respond_to do |format|
       if @problem.save
         format.html { redirect_to @problem, notice: 'Problem was successfully created.' }
@@ -57,6 +56,7 @@ class ProblemsController < ApplicationController
   def destroy
     @problem.destroy
     respond_to do |format|
+      format.js
       format.html { redirect_to problems_url, notice: 'Problem was successfully destroyed.' }
       format.json { head :no_content }
     end
@@ -71,8 +71,8 @@ class ProblemsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def problem_params
       params.require(:problem).permit(
-        :sgddfgdfg,
-        steps_attributes: [:id, :sgddfgdfg] 
+        :name,
+        steps_attributes: [:id, :name] 
         )
     end
 end

@@ -16,15 +16,13 @@
   <%= render partial: 'steps_table', locals: {steps: @problem.steps} %>
 </div>
 
-<%#= @problematic.name %>
-
 <%= render 'steps/form', :remote => true, locals: {steps: @problem.steps} %>
 
 
 
 
 
-<%= link_to problems_path, class: 'btn btn-default' do %>
+<%= link_to problems_path, class: 'btn btn-primary btn-basic' do %>
   <span class="glyphicon glyphicon-list-alt"></span>
   Back to all problems
 <% end %>
