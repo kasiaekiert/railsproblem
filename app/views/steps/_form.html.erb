@@ -1,4 +1,4 @@
-<%= form_for(@step, html: { class: "form-horizontal step-form", role: "form" }) do |f| %>
+<%= form_for(@step, html: { class: "form-horizontal step-form", role: "form" }, :remote => true) do |f| %>
   <%= f.hidden_field :problem_id %>
   <% if @step.errors.any? %>
     <div class="alert alert-danger alert-dismissable" role="alert">

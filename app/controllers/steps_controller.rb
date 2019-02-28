@@ -1,6 +1,6 @@
 class StepsController < ApplicationController
   before_action :set_step, only: [:show, :edit, :update, :destroy]
-
+  
   # GET /steps
   # GET /steps.json
   def index
@@ -25,6 +25,7 @@ class StepsController < ApplicationController
   # POST /steps.json
   def create
     @step = Step.new(step_params)
+    @problem = @step.problem
 
     respond_to do |format|
       if @step.save

@@ -12,13 +12,14 @@
 <strong>Steps:</strong> 
 </p>
 
-
-<%= render partial: 'steps_table', locals: {steps: @problem.steps} %>
-
-
-<div id="new-step">
-  <%= render 'steps/form' %>
+<div id='step_table'>
+  <%= render partial: 'steps_table', locals: {steps: @problem.steps} %>
 </div>
+
+<%#= @problematic.name %>
+
+<%= render 'steps/form', :remote => true, locals: {steps: @problem.steps} %>
+
 
 
 

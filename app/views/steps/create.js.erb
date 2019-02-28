@@ -1,4 +1,2 @@
-$('#new-step form').remove();
-$('#new-step a').show();
-$('table-steps').append("<%= j render @step %>");
+$('#step_table').html("<%= escape_javascript (render partial: 'problems/steps_table', locals: {steps: @problem.steps})%>");
 
