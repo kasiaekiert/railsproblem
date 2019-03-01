@@ -7,22 +7,18 @@
     <thead>
       <tr>
             <th>Name</th>
-            <th></th>
-        <th></th>
-        <th></th>
+            <th>Options</th>
       </tr>
     </thead>
 
     <tbody>
       <%= content_tag :tr, id: dom_id(step), class: dom_class(step) do %>
-                      <td><%= step.name %></td>
-                    <td class="link-text"><%= link_to 'Show', step %></td>
-          <td  class="link-text"><%= link_to 'Edit', edit_step_path(step) %></td>
-          <td  class="link-text"><%= link_to 'Destroy', step, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= step.name %></td>
+          <td class="link-text"><%= link_to 'Show', step %> <%= link_to 'Edit', edit_step_path(step) %> <%= link_to 'Destroy', step, method: :delete, data: { confirm: 'Are you sure?' } %> </td>
         <% end %>
 
   
-    <%= link_to new_step_path, remote: true, class: 'btn btn-primary' do %>
+    <%= link_to new_step_path, remote: true, class: 'btn btn-primary btn-newstep' do %>
       <span class="glyphicon glyphicon-plus"></span>
         New Step
     <% end %>

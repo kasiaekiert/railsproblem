@@ -1,8 +1,8 @@
-<table>
+<table  class="table table-striped table-bordered table-hover">
   <thead>
     <tr>
       <th>Name</th>
-      <th colspan="2"></th>
+      <th colspan="3">Options</th>
     </tr>
   </thead>
 
@@ -10,9 +10,8 @@
     <% steps.each do |step| %>
       <tr id='tr_step_<%= step.id %>'>
         <td><%= step.name %></td>
-        <td><%= link_to 'Show', step %></td>
-        <td><%= link_to 'Edit', edit_step_path(step) %></td>
-        <td><%= link_to 'Destroy', step, method: :delete, data: { confirm: 'Are you sure?', remote: true }, class: "delete_step" %></td>
+        <td><%= link_to 'Edit', edit_problem_path(@problem.id) %> 
+        <%= link_to 'Destroy', step, method: :delete, data: { confirm: 'Are you sure?', remote: true }, class: "delete_step" %></td>
       </tr>
     <% end %>
   </tbody>

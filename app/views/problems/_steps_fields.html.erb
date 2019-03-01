@@ -1,2 +1,17 @@
-<%= f.label :name %>
-<%= f.text_field :name %>
+<div class="form-group" id="tr_step_<%= f.object.id %>"> 
+  <div class="row">
+    <%= f.label :name, "Step name", class: "col-md-2 control-label" %>
+    <div class="col-md-8">
+      <%= f.text_field :name, class: "form-control" %>
+    </div>
+    <div class="col-md-2">  
+    <% if f.object.id %>
+      <%= link_to 'Destroy ', f.object, class: "btn btn-warning btn-back-edit", method: :delete, data: { confirm: 'Are you sure?' }, remote: true %> 
+    <% else %>
+      <a href='#' class='btn btn-warning' onclick='$("#tr_step_<%= f.object.id %>").remove(); return false;' >
+        Destroy 
+      </a>      
+    <% end %>
+    </div>
+  </div>
+</div>

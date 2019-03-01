@@ -1,33 +1,32 @@
-<div class="page-header">
-  <h1>Show problem</h1>
+
+<div class="row">
+    <div class="col-md-8 page-header">
+      <h1>Show problem</h1>
+    </div>
+
+    <div class="col-md-4 btn-back-edit">
+    <%= link_to problems_path, class: 'btn btn-success' do %>
+      <span class="glyphicon glyphicon-list-alt"></span>
+      Back to all problems
+    <% end %>
+    <%= link_to edit_problem_path(@problem), class: 'btn btn-warning' do %>
+      <span class="glyphicon glyphicon-pencil"></span>
+      Edit
+    <% end %>
+  </div>
 </div>
 
-<dl class="dl-horizontal">
-  <dt>Name of the problem:</dt>
-  <dd><%= @problem.name %></dd>
-</dl>
+Name of the problem:  <%= @problem.name %>
 
-<p.line> 
-<p> 
-<strong>Steps:</strong> 
-</p>
+<p.line> </p>
+
+<h2>Steps:</h2> 
 
 <div id='step_table'>
   <%= render partial: 'steps_table', locals: {steps: @problem.steps} %>
 </div>
-
+<p>Add steps quickly here or click "Edit" to edit them with the problem
+</p>
 <%= render 'steps/form', :remote => true, locals: {steps: @problem.steps} %>
 
-
-
-
-
-<%= link_to problems_path, class: 'btn btn-primary btn-basic' do %>
-  <span class="glyphicon glyphicon-list-alt"></span>
-  Back to all problems
-<% end %>
-<%= link_to edit_problem_path(@problem), class: 'btn btn-primary' do %>
-  <span class="glyphicon glyphicon-pencil"></span>
-  Edit the problem name
-<% end %>
 

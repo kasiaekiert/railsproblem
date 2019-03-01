@@ -16,8 +16,23 @@
 
  @import "bootstrap";
 
+ html {
+   height: 100%;
+ }
+ 
+ body,html {
+   min-height: 100% !important;
+   height: 100%;
+ }
+
+ .full_height {
+   min-height: calc(100% - 300px) !important;
+   height: calc(100% - 300px);
+ }
+
+
  .footer {
-   position: fixed;
+   height: 50px;
    left: 0;
    bottom: 0;
    width: 100%;
@@ -37,6 +52,7 @@
 
 .navbar a:hover {
    background-color: transparent;
+   color: #007bff;
 }
 
 .btn-basic {
@@ -51,4 +67,19 @@
       background-color: transparent !important;
       }
 }
+
+.btn-back-edit {
+   float: right;
+   text-align: right;
+}
+
+h1 {
+   font-size: 2rem !important;
+   margin: 26px 0 34px 0 !important;
+ }
+
+ .table-problemname {
+    float: left;
+    text-align: left;
+ }
 

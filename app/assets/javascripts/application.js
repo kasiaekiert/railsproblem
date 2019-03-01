@@ -17,9 +17,9 @@
 //= require bootstrap
 //= require_tree .
 
-// $( document ).on('turbolinks:load', function() {
-//     initialize_document()
-// })
+$( document ).on('turbolinks:load', function() {
+    initialize_document()
+})
 
 $(document).ready(function(){
     initialize_document()
@@ -27,7 +27,7 @@ $(document).ready(function(){
 
 
 function initialize_document(){
-    $("[data-form-prepend]").click(function(e) {
+    $("[data-form-prepend]").off("click").click(function(e) {
         var obj = $($(this).attr("data-form-prepend"));
         obj.find("input, select, textarea").each(function() {
           $(this).attr("name", function() {

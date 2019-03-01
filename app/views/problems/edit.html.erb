@@ -1,13 +1,14 @@
 <div class="page-header">
-  <%= link_to problems_path, class: 'btn btn-default' do %>
-    <span class="glyphicon glyphicon-list-alt"></span>
-    Back
-  <% end %>
-  <%= link_to @problem, class: 'btn btn-primary' do %>
-    <span class="glyphicon glyphicon-info-sign"></span>
-    Show
-  <% end %>
-  <h1>Editing problem</h1>
-</div>
+    <%= link_to problems_path, class: 'btn btn-default' do %>
+      <span class="glyphicon glyphicon-list-alt"></span>
+      Back
+    <% end %>
+    <%= link_to @problem, class: 'btn btn-primary' do %>
+      <span class="glyphicon glyphicon-info-sign"></span>
+      Show
+    <% end %>
 
-<%= render 'form' %>
+  <h1 style="padding-left: 10px">Editing problem</h1>
+
+  <%= render 'form' %>
+</div>
